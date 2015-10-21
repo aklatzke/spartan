@@ -1,0 +1,80 @@
+/*--- tablet ---*/
+@media only screen and (max-width: 959px) {}
+
+/*--- tablet  portrait orientation ---*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+
+/* nav menu fixes */
+
+.gdlr-navigation-wrapper .gdlr-main-menu > li > a {padding:8px inherit;}
+
+/* hp carousel */
+.new-carousel h2 {font-size: 1rem !important; margin-bottom: 0px; font-weight: bold;}
+.new-carousel p {font-size: .94rem !important; margin-top: .5rem;}
+.new-carousel li {font-size:.92rem !important;}
+
+.hp-message a {font-size: 1.1rem;}
+
+/*  */
+.below-sidebar-wrapper .gdlr-styled-box-body {padding-top:20px}
+
+/* footer adjusments */
+
+#footer-widget-1 .one-fifth {width: 30%;}
+
+#footer-widget-1 .widget_text {padding: 0 1%;}
+
+
+
+} /* end media query */
+
+/*--- mobile landscape style ---*/
+@media only screen and (max-width: 767px) {
+	
+/* Banners found on each page & post */
+.gdlr-page-title-wrapper {padding:0;
+}
+
+/*--- mobile portrait style ---*/
+@media only screen and (max-width: 419px) {
+	
+	body .container {max-width: 385px !important;}
+	
+/* 	social links at the top of every page */
+
+.top-navigation-right .connecting span {display: block; margin-bottom: 10px;}
+
+		
+		/* Header donate & After School Buttons */
+		.head-btns a {margin: 0;}
+		.d-btn {margin-bottom:20px;}
+		
+		a .d-btn,		
+		a .as-btn {width: 100%;}
+
+/* resize carousel items */
+ 
+ .new-carousel .carousel-title {}
+ 	 
+ 	 .new-carousel * {visibility: hidden; }
+ 	 .new-carousel h2 {visibility: visible;  font-size: .85rem; line-height: .875rem;} 
+
+/* Banners found on each page & post */
+.gdlr-page-title-wrapper {padding:0;
+
+/* Footer Items */
+
+	#footer-widget-1 #text-2 .textwidget {padding-left: 25px;}
+	
+	.menu-footer-menu-container #menu-footer-menu {padding: 2rem;}
+	
+	.menu-footer-menu-container #menu-footer-menu li:last-child {
+		display: block;
+		margin-right:inherit; 
+		text-align: left;
+		}
+		
+/* 	footer menu items */
+
+	.menu-footer-menu-container #menu-footer-menu .menu-item {display: block; text-align: left;}
+}

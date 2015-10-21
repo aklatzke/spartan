@@ -1,0 +1,397 @@
+/*
+Theme Name: Charity Hub Child Theme For Hannah Senesh Community Day School
+Theme URI: http://themes.goodlayers2.com/charityhub
+Description: Charity Hub Wordpress Child Theme For Hannah Senesh Community Day School
+Author: Goodlayers ~ Modified and extended by Ricardo Galvez
+Author URI: http://www.goodlayers.com
+Version: 1.05
+License: 
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: white, light, Green, two-columns, fluid-layout, custom-background, custom-colors, featured-images, theme-options
+Text Domain: gdlr_translate
+Template: charityhub-v1-05
+*/
+/* Hannah Senesh Customizations Below */
+ 
+/*
+	Commonly used color set
+	dark gray type: 	#404041
+	orange: 					#f8a34f 
+	light blue:				#a3bce1
+	dark blue:				#6480AB
+*/
+/*  GENERAL / GLOBAL */
+/* 	HEADER OVERRIDES*/
+/* 	NAVIGATION OVERRIDES */
+/*  DONATE & AFTERSCHOOL BUTTONS */
+/*  ABOVE THE FOLD ~ Home Page / Screen slider and four items */
+/*  SLIDER / CAROUSEL */
+/*  HOME PAGE CENTER COLUMN*/
+/* FOOTER  */
+
+/*  //////////////// */
+/*  GENERAL / GLOBAL */
+body {color: #222 !important;}
+
+p {font-size: 1.125rem !important;}
+
+ul {font-size: 1.125rem !important; list-style: none !important;}
+
+.gdlr-page-title,
+.gdlr-page-caption {text-shadow: 2px 2px 2px rgba(1,1,1,0.5);}
+
+/*  */
+
+.embed-vimeo {margin-bottom: 20px;}
+
+/* .gdlr-page-title-wrapper { 
+		padding:0 !important; position: relative; z-index: 89;
+		background: none !important; background-position: center; 
+}*/
+/* HEADER OVERRIDES & ADDITIONAL STYLES */
+/* 	row of icons at the top of the page */
+	.top-navigation-right .connecting * {font-weight: normal;}
+	.top-navigation-right .connecting i.gdlr-icon {margin-right: 2px;}
+			.top-navigation-right .connecting span {margin-right: 10px;}	
+			.top-navigation-right .connecting a {margin-left: 0;}
+	
+	/*search box*/
+	.gdlr-header-search {position: relative; top:24px;}
+	
+/* TYPOGRAPHY */	
+	
+	.orange-title {
+		border-top: 7px solid #f8a34f;
+		padding-top: 6px;
+		font-size: 1.25rem;
+		font-style: italic;
+		color: #f8a34f;}
+	
+/* DONATE & AFTERSCHOOL BUTTONS */
+	
+	.head-btns *,	
+	.gdlr-logo-right-text .head-btns a {color:#fff;font-size: 1rem;}
+	.head-btns {margin-top: 21px;}
+		.head-btns div {display: inline-block; padding-top: 10px;}
+			.gdlr-logo-right-text .head-btns a,
+			.head-btns .icon-group::before,
+			.head-btns .icon-gift::before {text-shadow: 1px 1px 8px rgba(100,100,100,0.25);}
+			.d-btn {
+				background-color: #9a57a2; border-top: #bb91c3 6px solid; height:47px; width: 190px; margin-right: 10px;}	
+			.as-btn {background-color: #a3bce1; border-top: #b0d0ff 6px solid; height: 47px; width: 134px; }
+	
+/* 	NAVIGATION OVERRIDES */
+
+.gdlr-header-style-2.gdlr-centered .gdlr-navigation .sf-menu  {text-transform: none;}
+	
+	.sf-menu > li > a,
+	.sf-menu > .gdlr-normal-menu ul {font-size: 17px !important;}
+	#gdlr-main-navigation, 
+	.gdlr-header-style-2.gdlr-centered .gdlr-navigation-wrapper.gdlr-fixed-menu {
+  border-top: #f8a34f solid 5px !important;
+  border-bottom: none !important;}
+
+/* ABOVE THE FOLD ~ Home Page / Screen slider and four items */
+.home .above-sidebar-wrapper {
+	background-color: #c7d7ef;
+	border-bottom: 5px #6480AB solid;
+	padding-bottom: 20px;}
+	
+	.gdlr-blog-info .blog-info, 
+	.blog-info a,
+	.blog-info i,
+	.gdlr-blog-content,
+	.gdlr-blog-grid .excerpt-read-more {color: #404041 !important;}
+
+.gdlr-blog-title a:hover{ color: #000 !important;}
+
+/*   SLIDER / CAROUSEL */
+	.gdlr-caption-wrapper.post-slider .gdlr-caption-title, 
+	.gdlr-caption-wrapper.post-slider .gdlr-caption-title a,
+	.gdlr-caption-wrapper.post-slider .gdlr-caption-text,
+	.gdlr-caption-wrapper.post-slider .gdlr-caption .blog-info,
+	.gdlr-caption-wrapper.post-slider .gdlr-caption-text a,
+	.gdlr-post-slider-item .gdlr-caption-feature {
+    color: #404041 !important;}
+ 
+/* LAYER SLIDER STYLINGS */
+.new-carousel {color:#222;}
+.new-carousel ul {margin:0; padding:0;}
+.new-carousel ul li {margin:0 0 8px; padding:0;}
+
+/* HOME PAGE LEFT COLUMN ~ CALENDAR */ 
+.gce-list-grouped .gce-feed {margin: 0;}
+.gce-list-title,
+.gce-list-event {font-size: 1.25rem;}
+.gce-list-event {background-color: #fff; padding: 0;}
+.gce-event-day {border-bottom: 3px solid #f8a34f;margin-bottom: 20px;}
+
+
+/* HOME PAGE CENTER COLUMN */
+/* These styles are used in touts and badges across the site */
+#why_senesh,
+#life_at_senesh_3,
+#hebrew_summer_camp,
+#right_placeholder,
+#hebrew_summer_camp h3 {
+	text-shadow: 1px 1px 4px rgba(0,0,0,1);}
+
+#life_at_senesh_3 h3,
+#life_at_senesh_3 h3 a,
+#why_senesh h3, 
+#why_senesh h3 a,
+#hebrew_summer_camp h3 a,
+#right_placeholder h3,
+#right_placeholder h3 a,
+#parents_handbook h3,
+#parents_handbook h3 a,
+#senesh_store h3,
+#senesh_store h3 a  {color:#fff;}
+	
+#hebrew_summer_camp {
+/*
+	background-image: url('/wp-content/uploads/2015/05/butterfly_2013_501x376.jpg');
+	height: 200px;
+	width: 350px;
+	max-width: 350px;
+*/}
+	
+	#hebrew_summer_camp h3.gdlr-styled-box-title {
+/*
+		padding: 34px 30px 14px;
+		position: relative;
+		top:20px;
+*/}
+			#hebrew_summer_camp h3.gdlr-styled-box-title a {color:#fff;}
+			
+			
+.home .gdlr-item.gdlr-blog-grid { margin-bottom: 0px;}		
+/*
+.gdlr-styled-box-body {}
+
+.home .gdlr-content-item {max-height: 363px; overflow-y: hidden;}
+	.home .gdlr-content-item h2.hp-tout {position: relative; top: 50px;}
+		.home .gdlr-content-item h2.hp-tout a {}
+			.home .gdlr-content-item p {}
+							.home .gdlr-content-item p img.alignnone {margin: 0;}	
+*/	
+
+/* HOME PAGE RIGHT COLUMN (ALSO ON RESOURCES & SCHOOL LIFE PAGES) */
+
+.with-sidebar-wrapper .gdlr-blog-content.hide {display: none;}
+
+
+/*	TEMP PLACE HOLDER FOR FOR THE HP BLOG COLUMN */
+#right_placeholder .gdlr-styled-box-body {height: 546px;}
+	
+
+/* MESSAGES FROM HEAD OF SCHOOL & BOARD */
+
+.hp-message a {color:#6c6960;}
+	
+.hp-message-image /* .circular  */{
+	width: 70px;
+	height: 70px;
+	border-radius: 35px;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+	background: url('/wp-content/uploads/2015/03/4047334335_044b045f46_o.jpg') no-repeat;
+	}
+
+/* INTERIOR PAGES */
+/* style the Hebrew captions */
+
+.gdlr-page-title-wrapper .gdlr-page-caption {
+	display: inline-block;
+	font-size: 2.5rem;
+	font-style: normal;
+	text-align: right;}
+
+/* Remove the Category label before all the category pages */
+/* http://hannahsenesh.org/category/announcements/ */
+/* <span class="gdlr-page-title">Category</span> */
+
+.category .gdlr-page-title-wrapper .gdlr-page-title {display: none;}
+
+/* ADMISSONS PAGES */
+.bigger-copy p {
+	font-size: 1.35rem !important;
+	line-height: 1.5rem !important;
+	margin-top: 1rem;
+	}
+	
+.big-copy {
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 1.05em;
+	margin-top: 20px;}
+
+/* 	admissions right column / important dates */
+
+#admissions_sidebar {background-color: #a3bce1}
+
+.admin-subnav {margin: 0;}
+.admin-subnav li {display: inline-block; margin:0 1.2rem 0 0;}
+
+/* do some work on the layout of the pages */
+/* .parent-pageid-869 {} */
+.page-id-869 .section-container,
+.parent-pageid-869 .section-container {padding-top: 30px;}
+
+.page-id-869 .sidebar-right-item,
+.parent-pageid-869 .sidebar-right-item {padding-top: 30px;}
+
+/* Process & Checklist page */
+#text-6 {margin-bottom: 20px;}
+
+.admissions-checklist {}
+
+.admissions-checklist li {line-height: 20px; margin-bottom: 20px; list-style-type:square; }
+
+/* ABOUT US ~ STRATEGIC PLANNING PAGE(S) */
+
+.page-id-369 #plan-lists ul {list-style: disc !important;}
+
+
+/* SCHOOL LIFE / PARENTS / GENERAL LANDING PAGE RULES */
+
+/*this is not good, but since wp doesnt spit out the the title as an id or class of page, we have to rely on the numbered IDs...*/
+
+/* for ../parents/ page-id-85 */
+/* ../school-life/ page-id-81 */ 
+
+.page-id-85 .gdlr-content-item p {margin: 0;}
+.page-id-81 .gdlr-content-item p {margin: 0;}
+
+.page-id-85 .gdlr-content-item h2,
+.page-id-81 .gdlr-content-item h2 {margin: 0;}
+
+/* FOR VIDEOS FOUND ON INTERIOR PAGES */
+
+.gdlr-fluid-video-wrapper {border:1px solid #f8a34f;}
+
+/* HOLIDAY CELEBRATIONS PAGE ~ */
+#celebrations ul li {list-style: disc;}
+
+/* SUMMER READING PAGES */
+.school_reading {}
+	.school_reading ul li.orange {color: #6480AB;}
+
+/* GENERAL BLOG PAGES */
+
+/* GDLR WIDGET ~ BLOG RIGHT SIDEBAR */
+
+/* See the hacking on recent-post-widget */
+#gdlr-recent-post-widget-3 {
+	border-top: 5px solid #f8a34f;
+	padding-top: 5px;}
+	
+.gdlr-blog-grid .gdlr-blog-title {font-size: 1.5rem;}
+
+.gdlr-sidebar .gdlr-widget-title {
+	border: none !important;
+	color: #f8a34f !important;
+	font-style: italic;
+	margin-bottom: 5px; 
+	padding: 0;}
+
+.recent-post-widget .recent-post-widget-title {margin: 0 !important;}
+
+.recent-post-widget-title h3 {font-size: 1.5rem; margin:0 !important;}
+	.recent-post-widget-title h3 a {color: #222; font-weight: bold;}
+	.recent-post-widget .blog-author a,
+	.recent-post-widget .recent-post-widget-info a {color:#f8a34f !important;}
+
+.recent-post-widget-thumbnail {
+	height: 150px !important;
+	float: none !important;
+	margin:0 !important; 
+	max-width: 349px !important;}
+
+
+/* FOOTER */
+
+.footer-container.container {
+	border-top: 5px solid #f8a34f;
+	margin-top: 15px;
+	padding-top:15px;}
+
+  #footer-widget-1 {}
+  #footer-widget-1 .widget_text,
+  #nav_menu-2 {margin: 0 0 25px 0;}
+  
+			.menu-footer-menu-container {
+				background-color: #6c6960; 
+				color:#fff; 
+				font-size: 1.125rem;
+				font-weight: bold;
+				min-height: 116px;}
+				
+			.menu-footer-menu-container #menu-footer-menu {
+				padding-top: 2.8rem;
+				padding-left: 1.5rem;}
+
+				
+					.menu-footer-menu-container #menu-footer-menu li {
+						border-bottom: medium none;
+						display: inline;  
+						text-align: center;
+						margin-right: 2.5em;}
+						 	
+						 	.menu-footer-menu-container #menu-footer-menu li:last-child {margin-right: 0;}
+						 	
+						 	.menu-footer-menu-container #menu-footer-menu li::before {content: none;}
+						
+						.menu-footer-menu-container #menu-footer-menu li a {color: #fff;}
+
+/* This is the footer connect links: fb, twitter, phone, etc...*/
+						#footer-widget-1 #text-2 .textwidget * {font-size: 1rem; font-style: normal; margin: 0;}						
+							
+							#footer-widget-1 #text-2 .textwidget .gdlr-shortcode-wrapper .one-fifth {}
+							
+							#footer-widget-1 #text-2 .textwidget ul {list-style: none; margin-left: 0;}
+													
+							
+									.footer-connect li {display: block;}
+							
+								#footer-widget-1 #text-2 .textwidget ul li {}
+							
+								#footer-widget-1 #text-2 .textwidget ul li i {margin-right: 10px; position: relative; top: 7px;}
+
+/* Google Map here*/
+
+						#footer-widget-1 #text-3 {}
+
+						/* Flexible iFrame for the map */
+
+						.flexible-container {
+							position: relative;
+/* 							padding-bottom: 56.25%; */
+/* 							padding-top: 30px; */
+							height: 275px;
+							overflow: hidden;
+							}
+
+							.flexible-container iframe,   
+							.flexible-container object,  
+							.Flexible-container embed {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+/* 							height: 100%; */
+							}
+
+/* set of links found undeneath the footer menu */
+  
+						#footer-widget-1 #text-4 {
+							border-bottom: 6px solid #f8a34f;
+							min-height: 122px; 
+							padding-top: 15px;}
+						#footer-widget-1 #text-4 .textwidget ul {list-style-type: none;}
+							
+							#footer-widget-1 #text-4 .textwidget ul li {
+								color:#f8a34f; 
+								font-size: 1rem;
+								font-weight: bold;
+								margin-bottom: 30px;}
