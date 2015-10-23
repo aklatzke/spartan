@@ -2,3 +2,6 @@
 !.gitignore
 !wp-content
 wp-content/themes/twenty*
+!Gruntfile.js
+!package.json
+!/build
