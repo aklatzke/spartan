@@ -25,6 +25,7 @@
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
 		</script>
-
+		
+		<script src="/build/main.js"></script>
 	</body>
 </html>

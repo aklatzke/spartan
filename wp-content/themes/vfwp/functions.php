@@ -15,6 +15,8 @@
 	Theme Support
 \*------------------------------------*/
 
+require_once('modules/evo/autoload.php');
+
 if (!isset($content_width))
 {
     $content_width = 900;
