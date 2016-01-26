@@ -3,7 +3,7 @@
 // For sublime text, search package control for "Javascript Next"
 // for correct syntax highlighting.
 window.vf = {};
-window.vf.vfwp = {}; 
+window.vf.spartan = {}; 
 
 // All classes should be declared in the /classes folder
 // The file name should match the class name and should be appended to the 
