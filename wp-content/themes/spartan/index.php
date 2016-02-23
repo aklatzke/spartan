@@ -1,19 +1,27 @@
-<?php get_header(); ?>
+!php
+	$albums = App::module('album')->get(['orderby' => 'desc']);
 
-	<main role="main" class="container">
-		<!-- section -->
-		<section>
+	$ids = array_map(function($album){
+		return $album->ID;
+	}, $albums);
+!!
 
-			<h1><?php _e( 'Latest Posts', 'html5blank' ); ?></h1>
+load header
 
-			<?php get_template_part('loop'); ?>
+:: div { class : container-fluid }
+	[row
+		:do count($albums)
+			:col 3 { class : tile-color, color: rand | 1 255 | }
+				:record album { type : album, record: $i, var: album }
+					<div>
+						<p>album.artist - album.title</p>
+					</div>
+				:endrecord
+			:endcol
+		:enddo
+	end]
 
-			<?php get_template_part('pagination'); ?>
+::/
 
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+load sidebar
+load footer

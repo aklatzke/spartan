@@ -14,7 +14,7 @@ window.vf.spartan = {};
 // 	{
 // 			... code ...
 // 	}
-// 		
+//
 // 	window.vf.yourtheme.tabs = Tabs;
 // Then access this in the other files or templates as such:
 //
@@ -36,3 +36,9 @@ window.vf.spartan = {};
 //
 // Meaning that anything within those directories should not have
 // an immediate dependency upon one another.
+//
+jQuery(function ($) {
+  var windowHeight = $(window).height();
+
+  $(".tile-color").height(windowHeight / 4);
+});

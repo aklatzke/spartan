@@ -4942,4 +4942,11 @@ a.bg-danger:focus, a.bg-danger:hover {
   top: 150px;
   position: relative; }
 
+html, body {
+  font-size: 10px; }
+
+.tile-color {
+  height: 20rem;
+  background-color: rgba(100, 100, 225, 0.4); }
+
 /*# sourceMappingURL=main.css.map */

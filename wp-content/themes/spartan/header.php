@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
@@ -24,27 +25,3 @@
         </script>
 	</head>
 	<body <?php body_class(); ?>>
-
-		<!-- wrapper -->
-		<div class="wrapper container">
-
-			<!-- header -->
-			<header class="header clear col-md-24" role="banner">
-
-					<!-- logo -->
-					<div class="logo col-md-8">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
-
-					<!-- nav -->
-					<nav class="nav col-md-16" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
-
-			</header>
-			<!-- /header -->
