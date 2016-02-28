@@ -1,24 +1,21 @@
-!php
-	$albums = App::module('album')->get(['orderby' => 'desc']);
-
-	$ids = array_map(function($album){
-		return $album->ID;
-	}, $albums);
-!!
-
 load header
+
+partial navbar
 
 :: div { class : container-fluid }
 	[row
-		:do count($albums)
-			:col 3 { class : tile-color, color: rand | 1 255 | }
-				:record album { type : album, record: $i, var: album }
-					<div>
-						<p>album.artist - album.title</p>
-					</div>
-				:endrecord
+		:records album { limit: 30, var: album, order: 'desc' }
+			:col 6 { class : tile-color, color: rand | 200 255 | }
+					<a href="album.url">
+						rawImg album.featuredImage
+						::h4
+							<span class='artist'>album.artist</span>
+							<br />
+							<span class='album'>album.title</span>
+						::/
+					</a>
 			:endcol
-		:enddo
+		:endrecords
 	end]
 
 ::/

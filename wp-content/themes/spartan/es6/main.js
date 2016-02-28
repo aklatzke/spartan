@@ -40,6 +40,22 @@ window.vf.spartan = {};
 jQuery(function($){
   var windowHeight = $(window).height();
 
-  $(".tile-color").height( windowHeight/4 );
+  $(".media-cell, .holding-cell").height( windowHeight );
+  $(".info-cell").css("min-height", windowHeight);
+
+  $(".tile-color").height( windowHeight/3 );
+
+  $("<style type='text/css'> .tab-inner:before{ background-image: " + $(".inner").css("background-image") + "; width: " + ( $(".inner").width() + 43 ) + "px; height: " + ( $(".inner").height() ) + "px; } </style>").appendTo("head");
+
+  $(".tab-group .tab-label").on("click", function(){
+    var wasActive = $(this).hasClass("active-tab");
+
+    $(".tab-inner").hide();
+    $(".active-tab").removeClass("active-tab");
+
+    if( wasActive ) return;
+
+    $(this).addClass("active-tab").closest(".tab").find(".tab-inner").show();
+
+  });
 });
- 

@@ -3,6 +3,7 @@
 use AKL\Mason;
 
 App::alias('Album', 'album');
+App::alias('Song', 'song');
 
 
 function loadCompiledTemplate($intended)

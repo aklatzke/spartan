@@ -1,3 +1,37 @@
 .tile-color
-  height: 20rem
+  padding-bottom: 100%
+  height: 0px
   background-color: rgba(100, 100, 225, .4)
+  position: relative
+  padding: 0
+  border: 1px solid #cdcdcd
+  width: 20%
+
+  @extend .clearfix
+
+  img
+    float: left
+    height: auto
+    width: 100%
+
+  h4
+    position: absolute
+    bottom: -3px
+
+    span
+      position: relative
+      display: inline-block
+      color: white
+      background-color: rgba(0,0,0, .7)
+      padding: 8px 14px
+      width: auto
+      font-weight: lighter
+      background-blend-mode: lighten
+
+    .artist
+      top: 0
+      font-size: 32px
+
+    .album
+      top: 2px
+      font-size: 24px

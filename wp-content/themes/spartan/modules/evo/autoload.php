@@ -57,6 +57,9 @@
 	require("includes/routes.php");
 	require("includes/endpoints.php");
 
+	$loader = new josegonzalez\Dotenv\Loader( $_SERVER["DOCUMENT_ROOT"] . "/.env" );
+	$loader->parse()->toEnv();
+
 	#-----------------------------------------
 	# Load static assets for the frontend and admin
 	# You can use these same utility functions to load

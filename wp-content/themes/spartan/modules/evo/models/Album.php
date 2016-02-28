@@ -2,21 +2,22 @@
 
 use Evo\Form as Form;
 use Evo\Typebuilder as TypeBuilder;
+use Evo\PostOutput;
 
 class Album extends TypeBuilder
 {
     # this is important, as TypeBuilder uses it internally to build queries and
     # create the post type
     protected $name = 'album';
-    protected $itunesSearchUrl = 'https://itunes.apple.com/search?term=!!term&entity=!!entity';
+    protected $itunesSearchUrl = 'https://itunes.apple.com/search?term={{term}}&entity={{entity}}&media=music';
 
     public function init(){
         # these option settings are the wordpress default settings - you can
         # freely change or add anything that a normal CPT would have as an option
         $options = array(
             'description' => __('Album'),
-            'public' => false,
-            'publicly_queryable' => false,
+            'public' => true,
+            'publicly_queryable' => true,
             'exclude_from_search' => false,
             'show_ui' => true,
             'query_var' => true,
@@ -55,7 +56,11 @@ class Album extends TypeBuilder
        });
 
         # initialize the static custom fields for this post type
-        return $this->initializeFields();
+        $this->initializeFields();
+
+        $this->registerFilters();
+
+        return $this;
     }
 
     public function initializeFields()
@@ -68,8 +73,8 @@ class Album extends TypeBuilder
             # fields could be in one bucket, or all in separate ones
             "name" => "Details",
             # fields that are included within this bucket
-            "fields" => array( "title", "artist", "releaseDate", 'review'),
-            "labels" => array( "Title", "Artist", "Release Date", "Review"),
+            "fields" => array( "title", "artist", "releaseDate", 'review', 'color', 'textColor', 'favorites', 'itunesCollectionId', 'albumTracklist', 'font', 'weight'),
+            "labels" => array( "Title", "Artist", "Release Date", "Review", 'Color', 'Text Color', 'Favorite Tracks', 'Itunes Collection ID', 'Tracklist', 'Font', 'Weight'),
             # where the bucket appears. In general, radio/checkboxes should be set to "side"
             # while text/textarea fields and anything more advanced should be set to "normal"
             "position" => "normal",
@@ -124,6 +129,70 @@ class Album extends TypeBuilder
         ));
 
         return $this;
+    }
+
+    public function registerFilters()
+    {
+        $this->registerSaveFilter('title', function($intended){
+            $artist = $_POST['albumArtistField'];
+            $album = $intended;
+            $id = $_POST["ID"];
+
+            if( has_post_thumbnail($id) )
+                return $intended;
+
+            $term = "{$artist}+{$album}";
+
+            $url = PostOutput::replaceVars( $this->itunesSearchUrl, (object) [
+                "entity" => 'album',
+                "term" => str_replace( " ", "+", $term )
+            ] );
+
+            $res = file_get_contents($url);
+
+            if( $res )
+                $res = json_decode($res);
+
+            $album = $res->results[0];
+
+            $imageUrl = str_replace("60", "1280", $album->artworkUrl60);
+
+            $_POST['albumItunesCollectionIdField'] = $album->collectionId;
+
+            $songs = "https://itunes.apple.com/lookup?entity=song&id=" . $album->collectionId;
+
+            $songResponse = file_get_contents($songs);
+
+            if( $songResponse )
+                $songResponse = json_decode($songResponse);
+
+            $songResponse = $songResponse->results;
+
+            $temp = [];
+            // first result is album
+            array_shift($songResponse);
+            foreach ($songResponse as $index => $value)
+            {
+                $ms = $value->trackTimeMillis;
+                $len = floor($ms/60000).':'.floor(($ms%60000)/1000).':'.str_pad(floor($ms%1000),3,'0', STR_PAD_LEFT);
+
+                $len = explode(":", $len);
+
+                array_shift( $len );
+
+                $temp[] = [
+                    "name" => $value->trackName,
+                    "len" => implode(":", $len),
+                    "itunesStreamable" => $value->isStreamable
+                ];
+            }
+
+            $_POST['albumAlbumTracklistField'] = json_encode( $temp );
+
+            $res = Utils::addPostImage($id, $imageUrl);
+
+            return $intended;
+        });
     }
 
     protected function replaceTerm( $str, $term, $value )
@@ -194,7 +263,7 @@ class Album extends TypeBuilder
         # this will only ever have one result, so we may as well just return that
         if( ! $get )
             return false;
-            
+
         return $get[0];
     }
 }
