@@ -1,0 +1,138 @@
+.media-cell, .info-cell
+  padding: 0
+  min-height: 100%
+  position: relative
+
+
+.media-cell
+  position: fixed
+  left: 0
+
+  .inner
+    position: absolute
+    left: 0
+    right: 0
+    line-height: 33%
+    top: 0
+    bottom: 0
+    background-size: auto 100%
+    background-position: center
+
+.info-cell
+  padding: 45px
+  padding-right: 65px
+  overflow-y: auto
+  background-color: #444
+  color: white
+
+  h4
+    font-size: 40px
+    font-weight: 300
+    letter-spacing: 2px
+  h5
+    font-size: 28px
+    font-weight: lighter
+
+.review
+  margin-top: 35px
+  font-size: 16px
+  font-weight: normal
+  line-height: 24px
+
+.tracklist
+  list-style-type: none
+  margin: 0
+  padding: 0px
+  color: white
+  font-weight: normal
+  font-size: 14px
+  line-height: 28px
+
+  strong
+    font-weight: bolder
+    font-style: italic
+
+
+.tab-group
+  position: relative
+  top: 0%
+  left: 0%
+  height: 100%
+  width: 100%
+
+  .tab
+    float: left
+    display: inline-block
+    margin-right: 15px
+    padding-top: 25px
+    padding-left: 25px
+
+    .tab-label
+      font-size: 24px
+      color: rgba(255, 255, 255, .5)
+      cursor: pointer
+      width: 40px
+      height: 40px
+      text-align: center
+      line-height: 40px
+      position: relative
+      z-index: 999
+
+      &.active-tab
+        color: rgba(255, 255, 255, .9)
+        background-color: #444
+
+    .tab-inner
+      display: none
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      background-color: rgba(0, 0, 0, .7)
+      padding-top: 85px
+      padding-left: 65px
+      padding-right: 65px
+      background-image: inherit
+      background-size: cover
+      color: white
+
+      h3
+        font-weight: lighter
+        font-size: 22px
+
+      > *
+        position: relative
+
+      &:before
+        content: " "
+        pointer-events: none
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        -webkit-filter: blur(3px) grayscale(90%) contrast(50%)
+        -moz-filter: blur(5px)
+        -o-filter: blur(5px)
+        -ms-filter: blur(5px)
+        filter: blur(5px)
+        background-size: auto 100%
+        background-position: center
+        z-index: 0
+
+.embed-wrapper
+  margin-bottom: 30px
+
+  h4
+    font-size: 18px
+    text-transform: uppercase
+    margin-bottom: 15px
+    color: white
+    font-weight: lighter
+
+  iframe
+    margin-bottom: 30px
+
+  i
+    color: white

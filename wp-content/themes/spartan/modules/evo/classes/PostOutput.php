@@ -74,6 +74,7 @@ class PostOutput{
 	 */
 	public static function replaceVars( $template, $vars, $index ){
 		$regex = preg_match_all('{{{(\w|\d|\s){0,}}}}', $template, $matches, PREG_SET_ORDER);
+		
 		$vars->index = $index;
 
 		foreach( $matches as $rawMatch ){

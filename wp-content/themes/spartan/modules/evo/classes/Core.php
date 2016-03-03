@@ -17,9 +17,9 @@ class Core
      */
     public function loadModel($name)
     {
-  	include __DIR__ . '/../models/' . $name . '.php';
+  	   include __DIR__ . '/../models/' . $name . '.php';
 
-  	$this->set( $name, new $name );
+  	   $this->set( $name, new $name );
     }
     /**
      * Creates an alias for the specified module
@@ -59,9 +59,9 @@ class Core
      */
     public function loadController($name)
     {
- 	include __DIR__.'/../controllers/' . $name . '.php';
+ 	    include __DIR__.'/../controllers/' . $name . '.php';
 
- 	$this->set( $name, new $name($this) );
+ 	    $this->set( $name, new $name($this) );
     }
     /**
      * Returns the module at the specified name or alias

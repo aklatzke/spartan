@@ -1,9 +1,5 @@
 <?php
 
-use \Actions;
-use \AjaxRouter;
-use \Input;
-
 class Route
 {
     /**

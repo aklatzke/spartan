@@ -1,19 +1,22 @@
-<?php get_header(); ?>
+load header
 
-	<main role="main" class="container">
-		<!-- section -->
-		<section>
+partial navbar
 
-			<h1><?php _e( 'Latest Posts', 'html5blank' ); ?></h1>
+<div class="container-fluid scrollable">
+	[row
+		:records album { limit: 30, var: album, order: 'desc' }
+			:col 6 { class : tile-color, color: rand | 200 255 | }
+					<a href="album.url">
+						rawImg album.featuredImage
+						::h4
+							<span class='artist'>album.artist</span>
+							<br />
+							<span class='album'>album.title</span>
+						::/
+					</a>
+			:endcol
+		:endrecords
+	end]
+</div>
 
-			<?php get_template_part('loop'); ?>
-
-			<?php get_template_part('pagination'); ?>
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+load footer
