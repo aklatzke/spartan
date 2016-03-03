@@ -1,0 +1,61 @@
+.queue-tray
+  position: fixed
+  height: auto
+  bottom: -25px
+  overflow-x: auto
+  overflow-y: hidden
+  height: 125px
+  padding-bottom: 25px
+  left: 25px
+  width: calc(50% - 50px)
+  background-color: rgba(0,0,0,.1)
+
+.youtube-link
+  font-size: 50px
+
+.player-controls
+  display: inline-block
+  position: relative
+
+  &.playing
+    .now-playing
+      display: inline-block
+
+.controls
+  width: 100%
+  height: 100%
+  position: absolute
+  z-index: 999
+  background-color: rgba(50, 50, 50, 1)
+  text-align: center
+  line-height: 35px
+  border-right: 1px solid #cdcdcd
+
+  h5
+    color: white
+    font-size: 11px
+    padding-top: 15px
+
+  a
+    font-size: 20px
+    color: #fff
+    margin-right: 10px
+
+  div
+    position: absolute
+    bottom: 0
+    color: white
+    left: 0
+    right: 0
+    text-align: center
+    font-size: 16px
+    line-height: 24px
+
+    .now-playing
+      display: none
+
+      img
+        width: 15px
+        position: relative
+        top: -3px
+        margin-left: 5px

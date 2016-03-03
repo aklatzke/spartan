@@ -2,9 +2,8 @@ load header
 
 partial navbar
 
-<div class="container-fluid">
+<div class='container-fluid'>
   :single song
-
     [row
 
       :col 12 { class: holding-cell }
@@ -24,6 +23,8 @@ partial navbar
         <div class="review">
           song.review
         </div>
+
+        partial pager
       </div>
 
     end]

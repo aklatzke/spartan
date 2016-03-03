@@ -12,6 +12,7 @@
     position: absolute
     left: 0
     right: 0
+    line-height: 33%
     top: 0
     bottom: 0
     background-size: auto 100%
@@ -19,6 +20,10 @@
 
 .info-cell
   padding: 45px
+  padding-right: 65px
+  overflow-y: auto
+  background-color: #444
+  color: white
 
   h4
     font-size: 40px
@@ -82,13 +87,19 @@
       position: absolute
       top: 0
       left: 0
-      height: 94%
-      width: 98%
+      height: 100%
+      width: 100%
       background-color: rgba(0, 0, 0, .7)
-      padding-top: 75px
-      padding-left: 30px
+      padding-top: 85px
+      padding-left: 65px
+      padding-right: 65px
       background-image: inherit
       background-size: cover
+      color: white
+
+      h3
+        font-weight: lighter
+        font-size: 22px
 
       > *
         position: relative
@@ -98,24 +109,30 @@
         pointer-events: none
         position: absolute
         top: 0
-        left: -34px
+        left: 0
         bottom: 0
         right: 0
-        -webkit-filter: blur(3px) grayscale(90%) contrast(90%)
+        -webkit-filter: blur(3px) grayscale(90%) contrast(50%)
         -moz-filter: blur(5px)
         -o-filter: blur(5px)
         -ms-filter: blur(5px)
         filter: blur(5px)
-        background-size: cover
+        background-size: auto 100%
+        background-position: center
         z-index: 0
 
 .embed-wrapper
+  margin-bottom: 30px
+
   h4
-    font-size: 16px
+    font-size: 18px
     text-transform: uppercase
     margin-bottom: 15px
     color: white
-    font-weight: bolder
+    font-weight: lighter
 
   iframe
-    margin-bottom: 15px
+    margin-bottom: 30px
+
+  i
+    color: white

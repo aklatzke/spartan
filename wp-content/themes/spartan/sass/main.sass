@@ -1,12 +1,18 @@
 @import bootstrap/dist/scss/bootstrap.min
 @import utilities
-
+@import misc/pager
+@import misc/queue
 
 html, body
   font-size: 10px
+  overflow-y: hidden
 
 body
   padding-top: 35px
+
+.container-fluid.scrollable
+  overflow-y: scroll
+  padding-bottom: 45px
 
 .navbar
   background-color: #222
@@ -56,7 +62,6 @@ body
             font-size: 32px
             line-height: 76px
             color: yellow
-
 
       a
         color: #fff

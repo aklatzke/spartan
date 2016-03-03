@@ -38,7 +38,7 @@
 	require("classes/Router.php");
 
 	# Input handling
-	require("classes/InputRepository.php");
+	require("classes/InputRepository.php"); 
 	require("classes/Input.php");
 
 	# creates a singleton app object so that we don't have to keep reinstating the
@@ -63,8 +63,7 @@
 	#-----------------------------------------
 	# Load static assets for the frontend and admin
 	# You can use these same utility functions to load
-	#-----------------------------------------
-	App::module('utils')->registerJavascript( Utils::getThemeAsset( '/modules/example/assets/js/es5.js' ) );
+	#----------------------------------------
 	App::module('utils')->registerAdminJavascript( Utils::getThemeAsset( '/modules/example/assets/js/es5.js' ) );
 
 	# Some default action setup

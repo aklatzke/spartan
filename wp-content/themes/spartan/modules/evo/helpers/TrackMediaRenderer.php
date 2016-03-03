@@ -24,30 +24,21 @@ final class TrackMediaRenderer
       }
     }
 
-    $html = [
+		$html = [
       "<div class='tab-group'>",
         "<div class='tab'>",
           "<div class='tab-label'><i class='fa fa-headphones'></i></div>",
-          "<div class='tab-inner'>"
+          "<div class='tab-inner'>",
+          "<h3>Previews</h3>",
+          "<hr />"
     ];
 
-    $html[] = "<div class='embed-wrapper'><h4>{$song->title}</h4><iframe width='465' height='250' src='https://www.youtube.com/embed/{$searchResponse}' frameborder='0' allowfullscreen></iframe></div>";
+		$html[] = "<div class='embed-wrapper'><h4>{$song->title}</h4><a href='#' data-video-id='{$searchResponse}' data-video-name='{$song->title}' class='youtube-link'><i class='fa fa-youtube'></i></a></div>";
 
-    $html[] = "</div></div><div class='tab'><div class='tab-label'><i class='fa fa-list-ol'></i></div><div class='tab-inner'><ul class='tracklist'>";
+    $html[] = "</div></div>";
 
-    foreach ($tracklist as $index => $el)
-    {
-      $strong = in_array($el->name, $favorites);
 
-      $num = $index + 1;
-
-      if( $strong )
-          $html[] = "<li><strong data-favorite-track='{$el->name}'>{$num}: {$el->name}</strong></li>";
-      else
-          $html[] = "<li>{$num}: {$el->name}</li>";
-    }
-
-    $html =  implode("", $html) . "</ul></div></div></div>";
+    $html =  implode("", $html) . "</div>";
     return $html;
   }
 }

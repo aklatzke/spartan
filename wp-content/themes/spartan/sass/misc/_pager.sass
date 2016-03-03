@@ -1,0 +1,237 @@
+.pager
+  position: fixed
+  top: 0
+  padding: 0
+  text-align: center
+  margin: 0
+  width: 45px
+  background-color: transparent
+  transition: all 1s ease
+  top: 50%
+  margin-top: -25px
+
+  .pager-inner
+
+  a
+    color: rgba(255,255,255,.4)
+    font-size: 32px
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: black
+
+    &:hover
+      color: rgba(255,255,255,1)
+
+.pager-next
+  right: 15px
+
+.pager-prev
+  left: 15px
+
+
+@-webkit-keyframes uil-ripple
+  0%
+    width: 0
+    height: 0
+    opacity: 0
+    margin: 0 0 0 0
+
+  33%
+    width: 44%
+    height: 44%
+    margin: -22% 0 0 -22%
+    opacity: 1
+
+  100%
+    width: 88%
+    height: 88%
+    margin: -44% 0 0 -44%
+    opacity: 0
+
+
+@-webkit-keyframes uil-ripple
+  0%
+    width: 0
+    height: 0
+    opacity: 0
+    margin: 0 0 0 0
+
+  33%
+    width: 44%
+    height: 44%
+    margin: -22% 0 0 -22%
+    opacity: 1
+
+  100%
+    width: 88%
+    height: 88%
+    margin: -44% 0 0 -44%
+    opacity: 0
+
+
+@-moz-keyframes uil-ripple
+  0%
+    width: 0
+    height: 0
+    opacity: 0
+    margin: 0 0 0 0
+
+  33%
+    width: 44%
+    height: 44%
+    margin: -22% 0 0 -22%
+    opacity: 1
+
+  100%
+    width: 88%
+    height: 88%
+    margin: -44% 0 0 -44%
+    opacity: 0
+
+
+@-ms-keyframes uil-ripple
+  0%
+    width: 0
+    height: 0
+    opacity: 0
+    margin: 0 0 0 0
+
+  33%
+    width: 44%
+    height: 44%
+    margin: -22% 0 0 -22%
+    opacity: 1
+
+  100%
+    width: 88%
+    height: 88%
+    margin: -44% 0 0 -44%
+    opacity: 0
+
+
+@-moz-keyframes uil-ripple
+  0%
+    width: 0
+    height: 0
+    opacity: 0
+    margin: 0 0 0 0
+
+  33%
+    width: 44%
+    height: 44%
+    margin: -22% 0 0 -22%
+    opacity: 1
+
+  100%
+    width: 88%
+    height: 88%
+    margin: -44% 0 0 -44%
+    opacity: 0
+
+
+@-webkit-keyframes uil-ripple
+  0%
+    width: 0
+    height: 0
+    opacity: 0
+    margin: 0 0 0 0
+
+  33%
+    width: 44%
+    height: 44%
+    margin: -22% 0 0 -22%
+    opacity: 1
+
+  100%
+    width: 88%
+    height: 88%
+    margin: -44% 0 0 -44%
+    opacity: 0
+
+
+@-o-keyframes uil-ripple
+  0%
+    width: 0
+    height: 0
+    opacity: 0
+    margin: 0 0 0 0
+
+  33%
+    width: 44%
+    height: 44%
+    margin: -22% 0 0 -22%
+    opacity: 1
+
+  100%
+    width: 88%
+    height: 88%
+    margin: -44% 0 0 -44%
+    opacity: 0
+
+
+@keyframes uil-ripple
+  0%
+    width: 0
+    height: 0
+    opacity: 0
+    margin: 0 0 0 0
+
+  33%
+    width: 44%
+    height: 44%
+    margin: -22% 0 0 -22%
+    opacity: 1
+
+  100%
+    width: 88%
+    height: 88%
+    margin: -44% 0 0 -44%
+    opacity: 0
+
+
+.ripple
+  background: none
+  width: 200px
+  height: 200px
+  left: 50%
+  top: 50%
+  margin-top: -100px
+  position: fixed
+  margin-left: -100px
+
+.ripple div
+  position: absolute
+  top: 50%
+  left: 50%
+  margin: 0
+  width: 0
+  height: 0
+  opacity: 0
+  border-radius: 50%
+  border-width: 2px
+  border-style: solid
+  -ms-animation: uil-ripple 2s ease-out infinite
+  -moz-animation: uil-ripple 2s ease-out infinite
+  -webkit-animation: uil-ripple 2s ease-out infinite
+  -o-animation: uil-ripple 2s ease-out infinite
+  animation: uil-ripple 2s ease-out infinite
+
+.ripple div:nth-of-type(1)
+  border-color: #fff
+
+.ripple div:nth-of-type(2)
+  border-color: yellow
+  -ms-animation-delay: 1s
+  -moz-animation-delay: 1s
+  -webkit-animation-delay: 1s
+  -o-animation-delay: 1s
+  animation-delay: 1s
+
+
+.loader-overlay
+  background-color: rgba(0,0,0,.6)
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 9999999999

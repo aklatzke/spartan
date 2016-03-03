@@ -2,7 +2,7 @@ load header
 
 partial navbar
 
-:: div { class : container-fluid }
+<div class="container-fluid scrollable">
 	[row
 		:records album { limit: 30, var: album, order: 'desc' }
 			:col 6 { class : tile-color, color: rand | 200 255 | }
@@ -17,8 +17,6 @@ partial navbar
 			:endcol
 		:endrecords
 	end]
+</div>
 
-::/
-
-load sidebar
 load footer
